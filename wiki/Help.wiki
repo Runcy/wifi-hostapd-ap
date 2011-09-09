@@ -1,0 +1,60 @@
+=WiFi Hostapd Ap WiKi=
+----
+==Основные возможности приложения==
+
+1. Создание точки доступа WiFi в несколько кликов
+
+2. Поддержка шифрования WPA2-PSK
+
+3. Поддержка скрытых сетей
+
+4. Готовые настройки по-умолчанию
+
+5. Запрос пароля для SUDO едино разовый (по-умолчанию). Но можно его и сбрасывать при выходе (опционально). + Ручной сброс пароля.
+
+6. Сохраняет старые конфигурационные файлы в том же каталоге. Бэкап в ручную. Автоматизированное удаление.
+
+==Известные проблемы==
+
+1. "Подвисает", когда пытается запросить список розданных IP-адресов у DHCP-сервера. (но скорее особенность, чем баг)
+----
+В данный момент актуальна версия программы:*0.9.2 RC2*.
+----
+=Установка=
+----
+===Ubuntu/Debian===
+1. Добавляем PPA:
+<code language="bash">sudo add-apt-repository ppa:ihaywood3/gambas3</code>
+
+2. Добавляем ключ:
+<code language="bash">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7F7D85E4</code>
+
+3. Обновляем кэш пакетов:
+<code language="bash">sudo apt-get update</code>
+
+4. Устанавливаем следующие пакеты для работы приложения и точки доступа:
+<code language="bash">sudo apt-get install wireless-tools bridge-utils hostapd dhcp3-server gambas3-runtime gambas3-gb-gtk gambas3-gb-qt4 gambas3-gb-settings gambas3-gb-form gambas3-gb-vb gambas3-gb-gui gambas3-gb-image</code>
+
+5. Скачиваем файл 
+*WiFi_Hostapd.gambas*
+
+6. Даём права на запуск:
+<code language="bash">sudo chmod -x WiFi_Hostapd.gambas</code>
+
+Запускаем!
+----
+===Другие дистрибутивы===
+1. Ищем репозиторий с версией Gambas не ниже 2.9.1 (RC1) или собираем из исходного кода.
+
+2. Устанавливаем следующие библиотеки:
+<code language="bash">gambas3-runtime gambas3-gb-gtk gambas3-gb-qt4 gambas3-gb-settings gambas3-gb-form gambas3-gb-vb gambas3-gb-gui gambas3-gb-image</code>
+
+3. Устанавливаем следующие пакеты для создания точки доступа:
+<code language="bash">
+hostapd dhcp3-server
+</code>
+
+Дальше так же, как и в пункте с Ubuntu.
+
+*Внимание! Не забудте указать пути до конфигурационных файлов в настройках приложения!*
+----
