@@ -32,13 +32,14 @@
 
 3. Устанавливаем следующие пакеты:
 
-<code language="bash"># apt-get install wireless-tools bridge-utils hostapd dnsmasq libqtgui4</code>
+<code language="bash">sudo apt-get install wireless-tools bridge-utils hostapd dnsmasq libqtgui4</code>
 *Внимание!* для корректной работы программы необходимо обновить ваш Qt до 
 4.7.
 
 4. Переходим в настройки, сохраняем настроки. 
 
-5. Запускаем файл *WiFi_Hostapd_AP*
+5. Запускаем файл 
+<code language="bash">./WiFi_Hostapd_AP</code>
 
 Запускаем!
 ----
@@ -46,9 +47,15 @@
 1, 2, 4 и 5 пункты те же, что и для *Ubuntu/Debian*.
 
 Список зависимостей:
+
 1. wireless-tools 
+
 2. bridge-utils 
+
 3. hostapd
+
 4. dnsmasq
+
 5. libqtgui4 (>=4.7)
+
 ----
